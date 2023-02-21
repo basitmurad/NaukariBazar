@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+
+    android:layout_margin="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/cardbg"
+        android:paddingBottom="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/logoImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/logo"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/companyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="16dp"
+            android:text="Administrative Associate"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/companySubtitle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/logoImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/companySubtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="Business Commercial Property"
+            android:textColor="@color/black"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@+id/logoImage"
+            app:layout_constraintStart_toStartOf="@+id/companyName"
+            app:layout_constraintTop_toBottomOf="@+id/companyName"
+            tools:ignore="MissingConstraints" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:visibility="visible"
+            app:layout_constraintStart_toStartOf="@+id/logoImage"
+            app:layout_constraintTop_toBottomOf="@+id/logoImage">
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout10"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout11"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent">
+
+
+                <ImageView
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:padding="1dp"
+                    android:src="@drawable/calendar"
+
+                    />
+
+                <TextView
+
+                    android:id="@+id/dateTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:text="Thrusday 13:00"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/linearLayout11"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/linearLayout10"
+                tools:ignore="MissingConstraints">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/propsalss"
+
+                    />
+
+                <TextView
+                    android:id="@+id/proposalTextview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="5dp"
+                    android:text="12 Proposals"
+                    android:textColor="@color/black"
+                    android:textSize="15sp"
+
+                    />
+
+            </LinearLayout>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/btn_detail"
+        android:layout_width="wrap_content"
+
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/backtab"
+
+
+        android:padding="10dp"
+        android:text="View Proposal"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toEndOf="@+id/constraintLayout2"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout2"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

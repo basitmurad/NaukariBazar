@@ -1,0 +1,74 @@
+package com.example.naukaribazar.adapter;
+
+import android.content.Context;
+import android.content.Intent;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.naukaribazar.R;
+import com.example.naukaribazar.activities.ServiceDetailsActivity;
+import com.example.naukaribazar.databinding.StatusCompleteLayoutBinding;
+import com.example.naukaribazar.model.StatusClass;
+
+import java.util.ArrayList;
+
+public class StatusCompleteAdapter extends RecyclerView.Adapter<StatusCompleteAdapter.Myholder> {
+
+    ArrayList<StatusClass> list;
+    private Context context;
+    StatusCompleteAdapter statusAdapter;
+
+    public StatusCompleteAdapter(ArrayList<StatusClass> list, Context context) {
+        this.list = list;
+        this.context = context;
+    }
+
+    @NonNull
+    @Override
+    public StatusCompleteAdapter.Myholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.status_complete_layout,parent,false);
+
+        return new Myholder(view);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull StatusCompleteAdapter.Myholder holder, int position) {
+        StatusClass statusClass = list.get(position);
+
+        holder.binding.logoImage.setImageResource(statusClass.getLogo());
+        holder.binding.dateTextview.setText(statusClass.getTime());
+        holder.binding.proposalTextview.setText(statusClass.getProposals());
+        holder.binding.companyName.setText(statusClass.getCompanyName());
+        holder.binding.companySubtitle.setText(statusClass.getCompanySubTitle());
+
+
+        holder.binding.btnDetail.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(context, ServiceDetailsActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intent);
+            }
+        });
+
+
+    }
+
+    @Override
+    public int getItemCount() {
+        return list.size();
+    }
+
+    public class Myholder  extends  RecyclerView.ViewHolder{
+
+        StatusCompleteLayoutBinding binding;
+        public Myholder(@NonNull View itemView) {
+            super(itemView);
+            binding =StatusCompleteLayoutBinding.bind(itemView);
+        }
+    }
+}

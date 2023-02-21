@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".activities.StatusAndHistoryActivity"
+    android:orientation="vertical">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+
+    >
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:src="@drawable/ic_baseline_arrow_back_24"
+        android:layout_gravity="center_vertical"
+        android:padding="5dp"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:textSize="22sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="10dp"
+        />
+</LinearLayout>
+
+
+
+
+    <com.google.android.material.tabs.TabLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/tablayout12"
+app:tabBackground="@drawable/tab_selector"
+        app:tabMode="fixed"
+
+        android:layout_margin="20dp"
+        app:tabPaddingEnd="10dp"
+        android:minWidth="60dp"
+
+        >
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:background="@drawable/tab_react"
+            android:layout_margin="15dp"
+
+
+            android:text="Active"
+            />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+android:background="@drawable/tab_react"
+            android:text="Complete"
+
+
+            />
+
+    </com.google.android.material.tabs.TabLayout>
+
+
+
+
+
+
+    <androidx.viewpager.widget.ViewPager
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/viewPager"
+
+        />
+
+
+<!--    <FrameLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/framelayout"-->
+
+<!--        />-->
+
+
+<!--<LinearLayout-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:padding="5dp"-->
+<!--    >-->
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Active"-->
+<!--        android:id="@+id/activeTab"-->
+<!--        android:layout_weight="1"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:background="@drawable/backtab"-->
+<!--        android:textAlignment="center"-->
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:padding="6dp"-->
+<!--        android:textSize="22sp"/>-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:id="@+id/completeTab"-->
+<!--        android:text="Complete"-->
+<!--        android:layout_weight="1"-->
+<!--        android:textAlignment="center"-->
+<!--        android:textSize="22sp"-->
+<!--        android:padding="6dp"-->
+<!--        android:textColor="#33C039"-->
+<!--        android:background="@drawable/backtabitem"-->
+
+<!--        android:layout_marginStart="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+
+<!--        >-->
+<!--    </TextView>-->
+<!--</LinearLayout>-->
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>
